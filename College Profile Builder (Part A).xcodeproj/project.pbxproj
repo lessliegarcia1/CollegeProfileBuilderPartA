@@ -15,6 +15,7 @@
 		3F8BA6601E4CDB7F006F30A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8BA65E1E4CDB7F006F30A9 /* LaunchScreen.storyboard */; };
 		3F8BA66B1E4CDB7F006F30A9 /* College_Profile_Builder__Part_A_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA66A1E4CDB7F006F30A9 /* College_Profile_Builder__Part_A_Tests.swift */; };
 		3F8BA6761E4CDB7F006F30A9 /* College_Profile_Builder__Part_A_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA6751E4CDB7F006F30A9 /* College_Profile_Builder__Part_A_UITests.swift */; };
+		3F8BA6841E4CDC22006F30A9 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BA6831E4CDC22006F30A9 /* College.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F8BA6711E4CDB7F006F30A9 /* College Profile Builder (Part A)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College Profile Builder (Part A)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8BA6751E4CDB7F006F30A9 /* College_Profile_Builder__Part_A_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_Builder__Part_A_UITests.swift; sourceTree = "<group>"; };
 		3F8BA6771E4CDB7F006F30A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F8BA6831E4CDC22006F30A9 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = College.swift; path = ../College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		3F8BA6521E4CDB7F006F30A9 /* College Profile Builder (Part A) */ = {
 			isa = PBXGroup;
 			children = (
+				3F8BA6831E4CDC22006F30A9 /* College.swift */,
 				3F8BA6531E4CDB7F006F30A9 /* AppDelegate.swift */,
 				3F8BA6551E4CDB7F006F30A9 /* MasterViewController.swift */,
 				3F8BA6571E4CDB7F006F30A9 /* DetailViewController.swift */,
@@ -265,6 +268,7 @@
 				3F8BA6581E4CDB7F006F30A9 /* DetailViewController.swift in Sources */,
 				3F8BA6561E4CDB7F006F30A9 /* MasterViewController.swift in Sources */,
 				3F8BA6541E4CDB7F006F30A9 /* AppDelegate.swift in Sources */,
+				3F8BA6841E4CDC22006F30A9 /* College.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
