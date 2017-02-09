@@ -8,7 +8,7 @@
 
 import UIKit
 
-class College: NSObject {
+class college: NSObject {
     var collegeName = String()
     var location = String()
     var enrollment = String()
