@@ -30,6 +30,9 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        tableView.reloadData()
+        let object = objects[indexPath.row] as! college
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,7 +103,8 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let object = objects[indexPath.row] as! college
+        cell.textLabel!.text = object.collegeName
         return cell
     }
 
