@@ -11,7 +11,7 @@ import UIKit
 class college: NSObject {
     var collegeName = String()
     var location = String()
-    var enrollment = String()
+    var enrollment = Int()
     var image = Data()
     
     
