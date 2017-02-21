@@ -7,29 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var collegeNameTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-
     @IBOutlet weak var enrollmentTextField: UITextField!
-
     @IBOutlet weak var imageView: UIImageView!
-    
-    @IBAction func onTappedSaveButton(_ sender: Any) {
-        if let college = self.detailItem{
-            college.collegeName = collegeNameTextField.text!
-            college.location = locationTextField.text!
-            college.enrollment = Int(enrollmentTextField.text!)!
-            college.image = UIImagePNGRepresentation(imageView.image!)!
-        }
-    }
-    
-    var detailItem: college? {
+    let realm = try! Realm()
+    var detailItem: College? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
@@ -39,14 +27,15 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func configureView() {
         // Update the user interface for the detail item
+        
         if let college = self.detailItem {
             if collegeNameTextField != nil {
                 collegeNameTextField.text = college.collegeName
@@ -57,7 +46,15 @@ class DetailViewController: UIViewController {
         }
     }
     
-    
-    
+    @IBAction func onTappedSaveButton(_ sender: Any) {
+        if let college = self.detailItem {
+            try! realm.write({
+                college.collegeName = collegeNameTextField.text!
+                college.location = locationTextField.text!
+                college.enrollment = Int(enrollmentTextField.text!)!
+                college.image = UIImagePNGRepresentation(imageView.image!)!
+            })
+        }
+        
+    }
 }
-
