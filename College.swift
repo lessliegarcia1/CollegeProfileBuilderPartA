@@ -14,14 +14,16 @@ class College: Object {
     dynamic var location = String()
     dynamic var enrollment = Int()
     dynamic var image = Data()
+    dynamic var website = String()
     
     
     // parameters -- what is passed into the function //
-    convenience init(collegeName: String,location: String, enrollment: Int, image: Data) {
+    convenience init(collegeName: String,location: String, enrollment: Int, image: Data, website: String) {
         self.init()
         self.collegeName = collegeName
         self.location = location
         self.enrollment = enrollment
+        self.website = website
         self.image = image
     }
 }
